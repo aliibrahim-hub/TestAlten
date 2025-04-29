@@ -1,7 +1,8 @@
 <?php
 
+namespace App\Service;
 
-use ..\..\src\Entity\Product;
+use src\Entity\Product;
 
 class ProductStorageService
 {
