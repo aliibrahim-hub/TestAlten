@@ -1,0 +1,121 @@
+{
+  "info": {
+    "name": "Product Management API",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "API pour g\u00e9rer les produits (PHP/Symfony, stockage JSON)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Cr\u00e9er un produit",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"code\": \"Prouduit1\",\n  \"name\": \"Produit Test\",\n  \"description\": \"Ceci est un produit de test\",\n  \"image\": \"image.png\",\n  \"category\": \"Test\",\n  \"price\": 19.99,\n  \"quantity\": 100,\n  \"internalReference\": \"REF001\",\n  \"shellId\": 1,\n  \"inventoryStatus\": \"INSTOCK\",\n  \"rating\": 4.5\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "products"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Voir tous les produits",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "products"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Voir un produit par ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/products/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "products",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Modifier un produit (PATCH)",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"price\": 29.99,\n  \"quantity\": 80\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/products/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "products",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Supprimer un produit",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/products/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "products",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
